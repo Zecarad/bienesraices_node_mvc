@@ -1,0 +1,56 @@
+{
+  "name": "bienesraice_mvc",
+  "version": "1.0.0",
+  "description": "primer proyecto Node.js",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "css": "postcss public/css/tailwind.css -o public/css/app.css --watch",
+    "js": "webpack --watch",
+    "dev": "concurrently \"npm run css\" \"npm run js\" ",
+    "db:importar": "node ./seed/seeder.js -i",
+    "db:eliminar": "node ./seed/seeder.js -e"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zecarad/Proyecto_Node.git"
+  },
+  "keywords": [
+    "Warpten0123."
+  ],
+  "author": "Zecarad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zecarad/Proyecto_Node/issues"
+  },
+  "homepage": "https://github.com/Zecarad/Proyecto_Node#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.0.1",
+    "nodemon": "^3.1.4",
+    "postcss": "^8.4.47",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^3.4.13",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "2": "^1.0.2",
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.6",
+    "csurf": "^1.10.0",
+    "dotenv": "^16.4.5",
+    "dropzone": "^5.9.3",
+    "express": "^4.21.0",
+    "express-validator": "^7.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.11.3",
+    "nodemailer": "^6.9.15",
+    "pug": "^3.0.3",
+    "sequelize": "^6.37.3"
+  }
+}
